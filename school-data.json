@@ -1,0 +1,51 @@
+{
+  "school": {
+    "fullName": "Vidyawati Devi P.G. College",
+    "heroName": "Vidyawati Devi",
+    "heroCollege": "P.G. College",
+    "shortName": "P.G. College",
+    "hindiName": "विद्यावती देवी",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "session": "2026–27",
+    "description": "Vidyawati Devi P.G. College, Prayagraj offers a range of degree and professional course options to help students take the next step in their academic journey.",
+    "phoneDisplay": "9119859999 · 7014098304",
+    "phoneNumbers": ["9119859999", "7014098304"],
+    "whatsappCountryCode": "91",
+    "emailDisplay": "vidyawatidevi@gmail.com",
+    "addressDisplay": " MW9C+C52, Katra Dayaram, Mau Aima, Jalalpur Katata, Uttar Pradesh 212507"
+
+  },
+  "courses": [
+    { "abbreviation": "BA", "title": "B.A." },
+    { "abbreviation": "BC", "title": "B.Com." },
+    { "abbreviation": "MA", "title": "M.A." },
+    { "abbreviation": "BS", "title": "B.Sc." },
+    { "abbreviation": "MC", "title": "M.Com." },
+    { "abbreviation": "BE", "title": "B.Ed." },
+    { "abbreviation": "BP", "title": "B.P.Ed." },
+    { "abbreviation": "DE", "title": "D.El.Ed." },
+    { "abbreviation": "DP", "title": "D.Pharma" },
+    { "abbreviation": "BP", "title": "B.Pharma" },
+    { "abbreviation": "12", "title": "10th & 12th" },
+    { "abbreviation": "IT", "title": "I.T.I." },
+    { "abbreviation": "LL", "title": "B.A. LL.B." },
+    { "abbreviation": "LB", "title": "LL.B." },
+    { "abbreviation": "MS", "title": "M.Sc." }
+  ],
+  "gallery": [
+    { "file": "assests/gallery1.jpg", "alt": "College community at a campus event" },
+    { "file": "assests/gallery2.jpg", "alt": "Students taking part in an outdoor activity" },
+    { "file": "assests/gallery3.jpg", "alt": "Students and staff at a college event" },
+    { "file": "assests/gallery4.jpg", "alt": "Students receiving recognition at college" },
+    { "file": "assests/gallery5.jpg", "alt": "Students participating in an outdoor college activity" },
+    { "file": "assests/gallery6.jpg", "alt": "Students taking part in a campus activity" },
+    { "file": "assests/gallery7.jpg", "alt": "College community gathered outdoors" },
+    { "file": "assests/gallery9.jpg", "alt": "College staff and students at an event" },
+    { "file": "assests/hero.jpg", "alt": "College entrance and campus view" }
+  ],
+  "leadership": [
+    { "role": "Manager", "name": "", "photo": "" },
+    { "role": "Director", "name": "", "photo": "" }
+  ]
+}
