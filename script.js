@@ -78,21 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
       addressDisplay: "Prayagraj, Uttar Pradesh — confirm full address"
     },
     courses: [
-      { abbreviation: "BA", title: "B.A." },
-      { abbreviation: "BC", title: "B.Com." },
-      { abbreviation: "MA", title: "M.A." },
-      { abbreviation: "BS", title: "B.Sc." },
-      { abbreviation: "MC", title: "M.Com." },
-      { abbreviation: "BE", title: "B.Ed." },
-      { abbreviation: "BP", title: "B.P.Ed." },
-      { abbreviation: "DE", title: "D.El.Ed.", highlight: true },
-      { abbreviation: "DP", title: "D.Pharma" },
-      { abbreviation: "BP", title: "B.Pharma" },
-      { abbreviation: "12", title: "10th & 12th" },
-      { abbreviation: "IT", title: "I.T.I." },
-      { abbreviation: "LL", title: "B.A. LL.B." },
-      { abbreviation: "LB", title: "LL.B." },
-      { abbreviation: "MS", title: "M.Sc." }
+      { abbreviation: "BA", title: "B.A.", category: "graduation" },
+      { abbreviation: "BC", title: "B.Com.", category: "graduation" },
+      { abbreviation: "MA", title: "M.A.", category: "postGraduation" },
+      { abbreviation: "BS", title: "B.Sc.", category: "graduation" },
+      { abbreviation: "MC", title: "M.Com.", category: "postGraduation" },
+      { abbreviation: "BE", title: "B.Ed.", category: "professional" },
+      { abbreviation: "BP", title: "B.P.Ed.", category: "professional" },
+      { abbreviation: "DE", title: "D.El.Ed.", category: "professional", highlight: true },
+      { abbreviation: "DP", title: "D.Pharma", category: "professional" },
+      { abbreviation: "BP", title: "B.Pharma", category: "professional" },
+      { abbreviation: "12", title: "10th & 12th", category: "schoolEducation" },
+      { abbreviation: "IT", title: "I.T.I.", category: "professional" },
+      { abbreviation: "LL", title: "B.A. LL.B.", category: "professional" },
+      { abbreviation: "LB", title: "LL.B.", category: "professional" },
+      { abbreviation: "MS", title: "M.Sc.", category: "postGraduation" }
     ],
     gallery: [
       { file: "assests/gallery1.jpg", alt: "College community at a campus event" },
@@ -171,32 +171,54 @@ document.addEventListener("DOMContentLoaded", () => {
     const courseGrid = document.getElementById("courseGrid");
     if (courseGrid) {
       courseGrid.innerHTML = "";
-      data.courses.forEach((course, index) => {
-        const link = document.createElement("a");
-        link.className = course.highlight ? "course-card course-highlight" : "course-card";
-        link.href = "#admission";
-        const header = document.createElement("span");
-        header.className = "course-card-header";
-        const abbreviation = document.createElement("span");
-        abbreviation.className = "course-card-badge";
-        abbreviation.textContent = course.abbreviation;
-        const number = document.createElement("span");
-        number.className = "course-card-number";
-        number.textContent = String(index + 1).padStart(2, "0");
-        header.append(abbreviation, number);
-        const title = document.createElement("strong");
-        title.className = "course-card-title";
-        title.textContent = course.title;
-        const footer = document.createElement("span");
-        footer.className = "course-card-footer";
-        footer.textContent = "Enquire about this course";
-        const arrow = document.createElement("span");
-        arrow.className = "course-card-arrow";
-        arrow.setAttribute("aria-hidden", "true");
-        arrow.textContent = "↗";
-        footer.append(arrow);
-        link.append(header, title, footer);
-        courseGrid.append(link);
+      const courseCategories = [
+        { id: "graduation", title: "Graduation" },
+        { id: "postGraduation", title: "Post Graduation" },
+        { id: "professional", title: "Professional Courses" },
+        { id: "schoolEducation", title: "School Education" }
+      ];
+      courseCategories.forEach((category) => {
+        const courses = data.courses.filter((course) => (course.category || "professional") === category.id);
+        if (!courses.length) return;
+
+        const group = document.createElement("section");
+        group.className = "course-group";
+        const heading = document.createElement("h3");
+        heading.className = "course-group-title";
+        heading.textContent = category.title;
+        const grid = document.createElement("div");
+        grid.className = "course-grid";
+
+        courses.forEach((course, index) => {
+          const link = document.createElement("a");
+          link.className = course.highlight ? "course-card course-highlight" : "course-card";
+          link.href = "#admission";
+          const header = document.createElement("span");
+          header.className = "course-card-header";
+          const abbreviation = document.createElement("span");
+          abbreviation.className = "course-card-badge";
+          abbreviation.textContent = course.abbreviation;
+          const number = document.createElement("span");
+          number.className = "course-card-number";
+          number.textContent = String(index + 1).padStart(2, "0");
+          header.append(abbreviation, number);
+          const title = document.createElement("strong");
+          title.className = "course-card-title";
+          title.textContent = course.title;
+          const footer = document.createElement("span");
+          footer.className = "course-card-footer";
+          footer.textContent = "Enquire about this course";
+          const arrow = document.createElement("span");
+          arrow.className = "course-card-arrow";
+          arrow.setAttribute("aria-hidden", "true");
+          arrow.textContent = "↗";
+          footer.append(arrow);
+          link.append(header, title, footer);
+          grid.append(link);
+        });
+
+        group.append(heading, grid);
+        courseGrid.append(group);
       });
     }
 

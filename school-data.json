@@ -13,25 +13,25 @@
     "phoneNumbers": ["9119859999", "7014098304"],
     "whatsappCountryCode": "91",
     "emailDisplay": "vidyawatidevi@gmail.com",
-    "addressDisplay": " MW9C+C52, Katra Dayaram, Mau Aima, Jalalpur Katata, Uttar Pradesh 212507"
+    "addressDisplay": " MW9C+C52, Katra Dayaram, Mau Aima Prayagraj, Uttar Pradesh 212507"
 
   },
   "courses": [
-    { "abbreviation": "BA", "title": "B.A." },
-    { "abbreviation": "BC", "title": "B.Com." },
-    { "abbreviation": "MA", "title": "M.A." },
-    { "abbreviation": "BS", "title": "B.Sc." },
-    { "abbreviation": "MC", "title": "M.Com." },
-    { "abbreviation": "BE", "title": "B.Ed." },
-    { "abbreviation": "BP", "title": "B.P.Ed." },
-    { "abbreviation": "DE", "title": "D.El.Ed." },
-    { "abbreviation": "DP", "title": "D.Pharma" },
-    { "abbreviation": "BP", "title": "B.Pharma" },
-    { "abbreviation": "12", "title": "10th & 12th" },
-    { "abbreviation": "IT", "title": "I.T.I." },
-    { "abbreviation": "LL", "title": "B.A. LL.B." },
-    { "abbreviation": "LB", "title": "LL.B." },
-    { "abbreviation": "MS", "title": "M.Sc." }
+    { "abbreviation": "BA", "title": "B.A.", "category": "graduation" },
+    { "abbreviation": "BC", "title": "B.Com.", "category": "graduation" },
+    { "abbreviation": "BS", "title": "B.Sc.", "category": "graduation" },
+    { "abbreviation": "MA", "title": "M.A.", "category": "postGraduation" },
+    { "abbreviation": "MC", "title": "M.Com.", "category": "postGraduation" },
+    { "abbreviation": "MS", "title": "M.Sc.", "category": "postGraduation" },
+    { "abbreviation": "BE", "title": "B.Ed.", "category": "professional" },
+    { "abbreviation": "BP", "title": "B.P.Ed.", "category": "professional" },
+    { "abbreviation": "DE", "title": "D.El.Ed.", "category": "professional" },
+    { "abbreviation": "DP", "title": "D.Pharma", "category": "professional" },
+    { "abbreviation": "BP", "title": "B.Pharma", "category": "professional" },
+    { "abbreviation": "IT", "title": "I.T.I.", "category": "professional" },
+    { "abbreviation": "LL", "title": "B.A. LL.B.", "category": "professional" },
+    { "abbreviation": "LB", "title": "LL.B.", "category": "professional" },
+    { "abbreviation": "12", "title": "10th & 12th", "category": "schoolEducation" }
   ],
   "gallery": [
     { "file": "assests/gallery1.jpg", "alt": "College community at a campus event" },
