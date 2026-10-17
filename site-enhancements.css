@@ -278,8 +278,37 @@
 }
 
 @media (max-width: 680px) {
+  .topbar {
+    display: none;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .brand {
+    margin-right: auto;
+  }
+
   .theme-toggle {
-    padding: 8px 10px;
+    order: 2;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    padding: 0;
+  }
+
+  .theme-toggle-label {
+    display: none;
+  }
+
+  .menu-btn {
+    order: 3;
+    margin-left: 8px;
+  }
+
+  .theme-toggle {
     font-size: .75rem;
   }
 
