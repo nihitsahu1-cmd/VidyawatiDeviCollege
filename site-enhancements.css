@@ -289,10 +289,21 @@
   }
 
   .call-float,
-  .back-to-top-float {
+  .back-to-top-float,
+  .whatsapp-float {
     right: 16px;
     width: 48px;
     height: 48px;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .whatsapp-icon {
+    width: 23px;
+    height: 23px;
   }
 
   .call-float {
