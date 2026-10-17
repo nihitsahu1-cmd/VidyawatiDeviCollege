@@ -133,6 +133,48 @@
   background: var(--blue);
 }
 
+.call-float,
+.back-to-top-float {
+  position: fixed;
+  right: 20px;
+  z-index: 30;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(16, 42, 67, .24);
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.call-float {
+  bottom: 88px;
+  background: var(--blue);
+}
+
+.back-to-top-float {
+  bottom: 156px;
+  background: var(--navy);
+}
+
+.call-float:hover,
+.back-to-top-float:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  color: #fff;
+}
+
+.call-float:focus-visible,
+.back-to-top-float:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
 :root[data-theme="dark"] {
   color-scheme: dark;
   --navy: #789b89;
@@ -244,5 +286,20 @@
   .whatsapp-form .btn {
     width: 100%;
     white-space: normal;
+  }
+
+  .call-float,
+  .back-to-top-float {
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .call-float {
+    bottom: 80px;
+  }
+
+  .back-to-top-float {
+    bottom: 140px;
   }
 }
