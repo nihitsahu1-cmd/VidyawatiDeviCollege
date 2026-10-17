@@ -1,0 +1,248 @@
+:root {
+  --navy: #315B4C;
+  --blue: #527565;
+  --gold: #C5A96B;
+  --cream: #E5EBDD;
+  --ink: #26362F;
+  --muted: #68766D;
+  --line: #E1E8DE;
+  --shadow: 0 12px 30px rgba(49, 91, 76, .08);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--cream);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.hero {
+  background: transparent;
+}
+
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+.hero-shade {
+  display: block !important;
+  background: linear-gradient(90deg, rgba(14, 30, 24, .4), rgba(14, 30, 24, .4) 58%, rgba(14, 30, 24, .4)),
+    linear-gradient(0deg, rgba(14, 30, 24, .4), rgba(14, 30, 24, .4));
+}
+
+.hero-slides {
+  z-index: 0;
+}
+
+.hero-slide.is-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hero-card {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.hero-photo {
+  box-shadow: none;
+}
+
+.contact-enquiry {
+  background: var(--cream);
+}
+
+.whatsapp-form {
+  display: grid;
+  width: min(100%, 640px);
+  gap: 10px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.whatsapp-form label {
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.whatsapp-form input,
+.whatsapp-form select,
+.whatsapp-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.whatsapp-form textarea {
+  resize: vertical;
+}
+
+.whatsapp-form input:focus,
+.whatsapp-form select:focus,
+.whatsapp-form textarea:focus {
+  border-color: var(--blue);
+  outline: 3px solid rgba(82, 117, 101, .18);
+}
+
+.whatsapp-form .btn {
+  justify-self: start;
+  margin-top: 10px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.whatsapp-form .btn:hover {
+  background: var(--blue);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --navy: #789b89;
+  --blue: #a8c2b4;
+  --gold: #d4bb83;
+  --cream: #18221d;
+  --ink: #e7eee9;
+  --muted: #b3c0b8;
+  --line: #36463c;
+  --shadow: 0 12px 30px rgba(0, 0, 0, .2);
+}
+
+:root[data-theme="dark"] body {
+  background: #111915;
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] header,
+:root[data-theme="dark"] .nav-links {
+  background: rgba(20, 30, 25, .98);
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] .brand-text strong,
+:root[data-theme="dark"] .nav-links a,
+:root[data-theme="dark"] .menu-btn,
+:root[data-theme="dark"] .theme-toggle {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .menu-btn,
+:root[data-theme="dark"] .theme-toggle {
+  border-color: var(--line);
+  background-color: #18221d;
+}
+
+:root[data-theme="dark"] .stats,
+:root[data-theme="dark"] .course-card,
+:root[data-theme="dark"] .contact-card,
+:root[data-theme="dark"] .whatsapp-form,
+:root[data-theme="dark"] .floating-note {
+  border-color: var(--line);
+  background: #1b2820;
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .stats-wrap,
+:root[data-theme="dark"] #about,
+:root[data-theme="dark"] #gallery,
+:root[data-theme="dark"] #leadership,
+:root[data-theme="dark"] #contact {
+  background-color: #111915;
+}
+
+:root[data-theme="dark"] .courses,
+:root[data-theme="dark"] .contact-enquiry {
+  background: #151f19;
+}
+
+:root[data-theme="dark"] .section-head h2,
+:root[data-theme="dark"] .about-copy h2,
+:root[data-theme="dark"] .course-card h3,
+:root[data-theme="dark"] .contact-card h3,
+:root[data-theme="dark"] .whatsapp-form label,
+:root[data-theme="dark"] .stat strong {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .section-head p,
+:root[data-theme="dark"] .about-copy p,
+:root[data-theme="dark"] .stat span,
+:root[data-theme="dark"] .course-card p,
+:root[data-theme="dark"] .contact-line small {
+  color: var(--muted);
+}
+
+:root[data-theme="dark"] .filters .filter,
+:root[data-theme="dark"] .whatsapp-form input,
+:root[data-theme="dark"] .whatsapp-form select,
+:root[data-theme="dark"] .whatsapp-form textarea {
+  border-color: var(--line);
+  background: #111915;
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .check i,
+:root[data-theme="dark"] .contact-icon,
+:root[data-theme="dark"] .course-icon {
+  background: #293a2f;
+  color: #d4bb83;
+}
+
+:root[data-theme="dark"] footer {
+  background: #0d1511;
+}
+
+:root[data-theme="dark"] .map-caption {
+  border-color: var(--line);
+  background: #1b2820;
+  color: var(--ink);
+}
+
+@media (max-width: 680px) {
+  .theme-toggle {
+    padding: 8px 10px;
+    font-size: .75rem;
+  }
+
+  .whatsapp-form .btn {
+    width: 100%;
+    white-space: normal;
+  }
+}
