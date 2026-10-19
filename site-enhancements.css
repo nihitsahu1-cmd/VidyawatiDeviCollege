@@ -229,6 +229,12 @@
   background-color: #111915;
 }
 
+.leader-photo {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+
 :root[data-theme="dark"] .courses,
 :root[data-theme="dark"] .contact-enquiry {
   background: #151f19;
